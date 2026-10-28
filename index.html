@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai Đàm Công Thành | Portfolio</title>
+    <meta name="description" content="Portfolio cá nhân của Mai Đàm Công Thành - Sinh viên Công nghệ thông tin, định hướng Front-end Developer.">
+    <meta name="theme-color" content="#f1e3c4">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mai Đàm Công Thành | Portfolio">
+    <meta property="og:description" content="Sinh viên ngành Công nghệ thông tin, định hướng Front-end Developer.">
+    <meta property="og:image" content="images/avatar.svg">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Áp dụng giao diện đã lưu TRƯỚC khi trang vẽ, tránh nháy sáng/tối khi tải lại -->
+    <script>
+            try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+    </script>
+    <style>
+        .skip-link {
+            position: fixed;
+            left: 12px;
+            top: -60px;
+            z-index: 2000;
+            padding: 10px 18px;
+            font-weight: 700;
+            background: var(--primary);
+            color: var(--on-primary);
+            border: 2px solid var(--line);
+            border-radius: var(--radius);
+            transition: top .2s;
+        }
+
+            .skip-link:focus {
+                top: 12px;
+            }
+    </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header" id="header">
+    <nav class="navbar container" aria-label="Điều hướng chính">
+      <a href="#home" class="logo" aria-label="An.dev - về trang chủ">An<span>.dev</span></a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Trang chủ</a></li>
+        <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+        <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+        <li><a href="#experience" class="nav-link">Học vấn</a></li>
+        <li><a href="#projects" class="nav-link">Dự án</a></li>
+        <li><a href="#awards" class="nav-link">Chứng chỉ</a></li>
+        <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Chuyển chế độ Steampunk / Cyberpunk" aria-pressed="false" title="Chuyển sang Cyberpunk (tối)">🌙</button>
+        <button type="button" class="icon-btn menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">👋 Xin chào, mình là</p>
+          <h1>Mai Đàm Công Thành</h1>
+          <p class="typing-line">Mình là <span id="typingText" class="typing">Front-end Developer</span><span class="cursor" aria-hidden="true">|</span></p>
+          <p class="hero-desc">Sinh viên năm 2 ngành Công nghệ thông tin, đam mê xây dựng những giao diện web đẹp, nhanh và dễ sử dụng.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Xem dự án</a>
+            <a href="#contact" class="btn btn-outline">Liên hệ mình</a>
+          </div>
+          <ul class="socials" aria-label="Mạng xã hội">
+            <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-ring">
+            <img src="images/avatar.svg" alt="Ảnh đại diện của Mai Đàm Công Thành" class="avatar" width="320" height="320">
+          </div>
+          <div class="float-card card-1" aria-hidden="true">💻 HTML / CSS / JS</div>
+          <div class="float-card card-2" aria-hidden="true">🐍 Python</div>
+          <div class="float-card card-3" aria-hidden="true">☕ Java</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GIỚI THIỆU + MỤC TIÊU ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Giới thiệu</p>
+          <h2>Về mình</h2>
+        </header>
+
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <h3>Mai Đàm Công Thành</h3>
+            <p class="role">Sinh viên Công nghệ thông tin · Định hướng Front-end Developer</p>
+            <p>
+              Mình là sinh viên năm 2 chuyên ngành Công nghệ thông tin tại Trường Đại Học Giao Thông Vận Tải TP.HCM.
+              Mình yêu thích việc biến ý tưởng thành sản phẩm thực tế, đặc biệt là các trang web có trải nghiệm người dùng mượt mà.
+              Ngoài lập trình, mình thích đọc sách, chơi cờ vua và chụp ảnh.
+            </p>
+            <ul class="info-list">
+              <li><strong>Ngày sinh:</strong> 19/12/2007</li>
+              <li><strong>Địa chỉ:</strong> TP. Hồ Chí Minh</li>
+              <li><strong>Email:</strong> <a href="mailto:hien69362@gmail.com">hien69362@gmail.com</a></li>
+              <li><strong>Điện thoại:</strong> <a href="tel:0348312074">0348 312 074</a></li>
+            </ul>
+          </article>
+
+          <article class="about-card goal-card reveal" id="goal">
+            <h3>🎯 Mục tiêu nghề nghiệp</h3>
+            <p>
+              <strong>Ngắn hạn:</strong> Thực tập tại một công ty phần mềm để áp dụng kiến thức HTML, CSS, JavaScript vào dự án thực tế
+              và học quy trình làm việc nhóm chuyên nghiệp.
+            </p>
+            <p>
+              <strong>Dài hạn:</strong> Trở thành Front-end Developer có thể xây dựng sản phẩm web hoàn chỉnh, tiến tới vị trí Full-stack Developer
+              trong vòng 3–5 năm tới.
+            </p>
+            <div class="stats">
+              <div class="stat"><span class="counter" data-target="4">4</span>+<small>Dự án</small></div>
+              <div class="stat"><span class="counter" data-target="6">6</span>+<small>Công nghệ</small></div>
+              <div class="stat"><span class="counter" data-target="2">2</span><small>Năm học code</small></div>
+            </div>
+          </article>
+        </div>
+        <!-- Terminal tương tác sẽ được script.js chèn vào cuối khối này -->
+      </div>
+    </section>
+
+    <!-- ===== KỸ NĂNG ===== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Kỹ năng</p>
+          <h2>Công nghệ mình sử dụng</h2>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <h3>Front-end</h3>
+            <div class="skill" data-level="90">
+              <div class="skill-top"><span>HTML5</span><span>90%</span></div>
+              <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
+            </div>
+            <div class="skill" data-level="85">
+              <div class="skill-top"><span>CSS3 / Flexbox / Grid</span><span>85%</span></div>
+              <div class="bar"><div class="bar-fill" style="width:85%"></div></div>
+            </div>
+            <div class="skill" data-level="75">
+              <div class="skill-top"><span>JavaScript (DOM, ES6)</span><span>75%</span></div>
+              <div class="bar"><div class="bar-fill" style="width:75%"></div></div>
+            </div>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>Lập trình khác</h3>
+            <div class="skill" data-level="70">
+              <div class="skill-top"><span>Python</span><span>70%</span></div>
+              <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+            </div>
+            <div class="skill" data-level="65">
+              <div class="skill-top"><span>Java (OOP)</span><span>65%</span></div>
+              <div class="bar"><div class="bar-fill" style="width:65%"></div></div>
+            </div>
+            <div class="skill" data-level="60">
+              <div class="skill-top"><span>SQL / MySQL</span><span>60%</span></div>
+              <div class="bar"><div class="bar-fill" style="width:60%"></div></div>
+            </div>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3>Công cụ &amp; kỹ năng mềm</h3>
+            <ul class="tags">
+              <li>Git / GitHub</li>
+              <li>VS Code</li>
+              <li>Figma</li>
+              <li>Responsive Design</li>
+              <li>Làm việc nhóm</li>
+              <li>Giao tiếp</li>
+              <li>Quản lý thời gian</li>
+              <li>Tự học</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HỌC VẤN / KINH NGHIỆM / HOẠT ĐỘNG ===== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Hành trình</p>
+          <h2>Học vấn, kinh nghiệm &amp; hoạt động</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="dot" aria-hidden="true"></span>
+            <time datetime="2022">2022 – nay</time>
+            <h3>Đại học Giao Thông Vận Tải TP.HCM</h3>
+            <p class="meta">Học vấn · Ngành Công nghệ thông tin</p>
+            <p>GPA hiện tại: 3.4/4.0. Các môn nổi bật: Lập trình Web, Cấu trúc dữ liệu, Cơ sở dữ liệu, Lập trình hướng đối tượng.</p>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="dot" aria-hidden="true"></span>
+            <time datetime="2025">2025</time>
+            <h3>Cộng tác viên Front-end – Dự án freelance</h3>
+            <p class="meta">Kinh nghiệm · Làm việc từ xa</p>
+            <p>Xây dựng landing page responsive cho cửa hàng nhỏ, tối ưu tốc độ tải trang và hiển thị trên di động.</p>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="dot" aria-hidden="true"></span>
+            <time datetime="2024">2024</time>
+            <h3>Thành viên CLB Lập trình của trường</h3>
+            <p class="meta">Hoạt động · Thành viên ban chuyên môn</p>
+            <p>Tham gia tổ chức workshop HTML/CSS cho sinh viên năm nhất và hướng dẫn hơn 40 bạn làm trang web đầu tiên.</p>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="dot" aria-hidden="true"></span>
+            <time datetime="2023">2023</time>
+            <h3>Tình nguyện viên Mùa hè xanh</h3>
+            <p class="meta">Hoạt động · Hoạt động cộng đồng</p>
+            <p>Tham gia 2 tuần hoạt động hỗ trợ cộng đồng, rèn luyện kỹ năng làm việc nhóm và giao tiếp.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== DỰ ÁN ===== -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Dự án</p>
+          <h2>Dự án cá nhân</h2>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Lọc dự án">
+          <button type="button" class="filter-btn active" data-filter="all">Tất cả</button>
+          <button type="button" class="filter-btn" data-filter="web">Web</button>
+          <button type="button" class="filter-btn" data-filter="python">Python</button>
+          <button type="button" class="filter-btn" data-filter="java">Java</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-category="web"
+            data-title="Todo List App"
+            data-desc="Ứng dụng quản lý công việc cho phép thêm, sửa, xóa, đánh dấu hoàn thành và lọc theo trạng thái. Dữ liệu được lưu bằng LocalStorage nên không mất khi tải lại trang."
+            data-tech="HTML, CSS, JavaScript, LocalStorage"
+            data-link="https://github.com/">
+            <img src="images/project-1.svg" alt="Giao diện ứng dụng Todo List" loading="lazy" width="400" height="250">
+            <div class="project-body">
+              <h3>Todo List App</h3>
+              <p>Quản lý công việc hằng ngày, lưu dữ liệu bằng LocalStorage.</p>
+              <ul class="tags small"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project-links">
+                <button type="button" class="link-btn detail-btn">Chi tiết</button>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web"
+            data-title="Weather Dashboard"
+            data-desc="Trang xem thời tiết theo thành phố, hiển thị nhiệt độ, độ ẩm và dự báo 5 ngày. Gọi dữ liệu từ API công khai bằng fetch và xử lý lỗi khi không tìm thấy thành phố."
+            data-tech="HTML, CSS Grid, JavaScript, Fetch API"
+            data-link="https://github.com/">
+            <img src="images/project-2.svg" alt="Giao diện trang thời tiết" loading="lazy" width="400" height="250">
+            <div class="project-body">
+              <h3>Weather Dashboard</h3>
+              <p>Tra cứu thời tiết theo thành phố bằng Fetch API.</p>
+              <ul class="tags small"><li>JavaScript</li><li>API</li><li>Grid</li></ul>
+              <div class="project-links">
+                <button type="button" class="link-btn detail-btn">Chi tiết</button>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="python"
+            data-title="Quản lý chi tiêu cá nhân"
+            data-desc="Chương trình dòng lệnh giúp ghi lại thu chi, thống kê theo tháng và xuất báo cáo ra file CSV. Áp dụng kiến thức về hàm, file I/O và cấu trúc dữ liệu."
+            data-tech="Python, CSV, Pandas"
+            data-link="https://github.com/">
+            <img src="images/project-3.svg" alt="Giao diện chương trình quản lý chi tiêu" loading="lazy" width="400" height="250">
+            <div class="project-body">
+              <h3>Quản lý chi tiêu</h3>
+              <p>Ghi thu chi, thống kê theo tháng, xuất báo cáo CSV.</p>
+              <ul class="tags small"><li>Python</li><li>Pandas</li></ul>
+              <div class="project-links">
+                <button type="button" class="link-btn detail-btn">Chi tiết</button>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="java"
+            data-title="Quản lý thư viện"
+            data-desc="Ứng dụng Java quản lý sách và độc giả: thêm, tìm kiếm, mượn trả sách. Áp dụng lập trình hướng đối tượng với kế thừa, đa hình và kết nối cơ sở dữ liệu MySQL."
+            data-tech="Java, OOP, MySQL, JDBC"
+            data-link="https://github.com/">
+            <img src="images/project-4.svg" alt="Giao diện phần mềm quản lý thư viện" loading="lazy" width="400" height="250">
+            <div class="project-body">
+              <h3>Quản lý thư viện</h3>
+              <p>Quản lý sách, độc giả và mượn trả bằng Java OOP.</p>
+              <ul class="tags small"><li>Java</li><li>MySQL</li></ul>
+              <div class="project-links">
+                <button type="button" class="link-btn detail-btn">Chi tiết</button>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHỨNG CHỈ / GIẢI THƯỞNG / SỞ THÍCH ===== -->
+    <section class="section" id="awards">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Thành tích</p>
+          <h2>Chứng chỉ, giải thưởng &amp; sở thích</h2>
+        </header>
+
+        <div class="awards-grid">
+          <article class="award-card reveal">
+            <span class="award-icon" aria-hidden="true">📜</span>
+            <h3>Chứng chỉ</h3>
+            <ul>
+              <li>IELTS 6.0 (2024)</li>
+              <li>Responsive Web Design – freeCodeCamp (2024)</li>
+              <li>Python for Everybody – Coursera (2023)</li>
+            </ul>
+          </article>
+          <article class="award-card reveal">
+            <span class="award-icon" aria-hidden="true">🏆</span>
+            <h3>Giải thưởng</h3>
+            <ul>
+              <li>Chưa có</li>
+            </ul>
+          </article>
+          <article class="award-card reveal">
+            <span class="award-icon" aria-hidden="true">🎨</span>
+            <h3>Sở thích</h3>
+            <ul>
+              <li>Đọc sách công nghệ</li>
+              <li>Chơi cờ vua</li>
+              <li>Chụp ảnh đường phố</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIÊN HỆ ===== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Liên hệ</p>
+          <h2>Hãy kết nối với mình</h2>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p>Bạn có ý tưởng dự án hoặc muốn trao đổi cơ hội thực tập? Hãy để lại lời nhắn, mình sẽ phản hồi sớm nhất.</p>
+            <ul>
+              <li>📧 hien69362@gmail.com</li>
+              <li>📱 0348 312 074</li>
+              <li>📍 TP. Hồ Chí Minh</li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Họ và tên</label>
+              <input type="text" id="name" name="name" placeholder="Nguyễn Văn B" autocomplete="name" aria-describedby="nameError">
+              <small class="error" id="nameError"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="ban@example.com" autocomplete="email" aria-describedby="emailError">
+              <small class="error" id="emailError"></small>
+            </div>
+            <div class="form-group">
+              <label for="message">Nội dung</label>
+              <textarea id="message" name="message" rows="5" placeholder="Nhập lời nhắn của bạn..." aria-describedby="messageError"></textarea>
+              <small class="error" id="messageError"></small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Gửi tin nhắn</button>
+            <p class="form-success" id="formSuccess" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Mai Đàm Công Thành. Thiết kế bằng HTML, CSS &amp; JavaScript.</p>
+      <a href="#home">Lên đầu trang ↑</a>
+    </div>
+  </footer>
+
+  <!-- Modal chi tiết dự án -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Đóng">✕</button>
+      <img id="modalImg" src="" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <p><strong>Công nghệ:</strong> <span id="modalTech"></span></p>
+      <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Xem mã nguồn ↗</a>
+    </div>
+  </div>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Lên đầu trang">↑</button>
+
+  <noscript>
+    <p style="position:fixed;bottom:0;left:0;right:0;margin:0;padding:8px;text-align:center;background:#222;color:#fff;font-size:.85rem;z-index:2000">
+      Trang hoạt động tốt nhất khi bật JavaScript (hiệu ứng, terminal, chuyển giao diện).
+    </p>
+  </noscript>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
